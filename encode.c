@@ -1,19 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 int main(int argc, char const *argv[]) {
-     char *str = "AABBBCCD";
-     int i,n,count = 0;
+     char *str = "AAABBBCCD";
+     int n,count = 1;
      n = strlen(str);
-
-     for(i = 1; i < n; i++)
+     for(size_t i = 0; i < n; i++)
      {
-          if(str[i-1] == str[i]){
+          if(str[i] == str[i+1])
                count++;
-               printf("%d\n", count);}
           else
+          {
+               printf("%c%d\n",str[i],count );
                count = 1;
-
+          }
      }
-     printf("%d\n", count);
      return 0;
 }
