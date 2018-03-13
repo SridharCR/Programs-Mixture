@@ -2,11 +2,9 @@
 int get_count(int n)
 {
      int count = 0;
-     while(n >= 0) {
-          for (size_t i = n; i > 0; i=i/2) {
-               if(i%2 == 1) count++;
-          }
-          n--;
+     while(n) {
+          n &= (n-1);
+          count++;
      }
      return count;
 }

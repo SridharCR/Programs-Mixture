@@ -8,7 +8,6 @@ public class set_bits2
                for (int j = 0;j < 2;j++ ) {
                     m = Math.pow(2,j);
                     count = count + (int)Math.ceil(n/(double)m);
-                    System.out.println(count);
                }
           }
           return count;
