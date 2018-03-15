@@ -46,7 +46,7 @@ public class square {
                return 1;
           if(d2 == d3 && 2*d2 == d1)
                return 1;
-          return 0;
+          return 0
      }
      public static void main(String[] args) {
           Point p1 = new Point(20,10);
