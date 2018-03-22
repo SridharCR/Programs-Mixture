@@ -3,29 +3,16 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
 public class equalstring {
-
     static String abbreviation(String a, String b) {
-         if(a.length() < 0 && b.length() < 0)
+         System.out.println(a+"\n"+b);
+         int c = a.length() - 1;
+         String v = a.subString(c);
+         if(a.length() < 0 || b.length() < 0)
                return "NO";
-          if(a.indexOf(0) == b.indexOf(b)) {
-          return abbreviation(a.subString(),b.subString());
-          }
-          return abbreviation(a.subString(),b);
-        /*String c = a.toUpperCase();
-        int count = 0;
-        System.out.println(c);
-        for (int i = 0;i < c.length(); i++) {
-             for (int j = 0;j < b.length() ;j++ ) {
-                  if(c.indexOf(i) == b.indexOf(j)) {
-                       count++;
-
-                  }
-             }
-        }
-        System.out.println(c);
-        return "YES";*/
+          //if(a.indexOf(a.length()-1) == b.indexOf(b.length()-1))
+               //return abbreviation(a.subString(a.length()-2),b.subString(b.length()-2));
+          return abbreviation(v,b);
     }
 
     public static void main(String[] args) {
@@ -34,8 +21,9 @@ public class equalstring {
         for(int a0 = 0; a0 < q; a0++){
             String a = in.next();
             String b = in.next();
-            String result = abbreviation(a, b);
-            System.out.println(result);
+            abbreviation(a, b);
+            //String result = abbreviation(a, b);
+            //System.out.println(result);
         }
         in.close();
     }
