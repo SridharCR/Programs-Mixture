@@ -4,7 +4,7 @@ struct sNode
 {
      int data;
      struct sNode *next;
-}
+};
 struct queue
 {
      struct sNode *stack1;
