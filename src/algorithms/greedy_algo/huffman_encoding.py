@@ -1,4 +1,5 @@
-
+# This program generates the huffman codes with the given probability
+# Reference: https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
 
 class Node:
     def __init__(self, char, prob):
